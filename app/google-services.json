@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "962196792378",
+    "project_id": "harmony-a9c98",
+    "storage_bucket": "harmony-a9c98.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962196792378:android:e59d0186ffa915111c4103",
+        "android_client_info": {
+          "package_name": "com.example.harmony"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962196792378-laghdqhcqgp5crfohgohqjhe0jrqlntp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.harmony",
+            "certificate_hash": "c2f65023ab88276a424456e34fd4e43bd052335a"
+          }
+        },
+        {
+          "client_id": "962196792378-kt5qd6nqrrj5utcc1p6390r3vvp9ftvc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv24Y2IGWYqUnbVvKjfAhm4cRr2LLa0CI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962196792378-kt5qd6nqrrj5utcc1p6390r3vvp9ftvc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
