@@ -41,6 +41,9 @@ dependencies {
     implementation(libs.play.services.location)
     implementation(libs.play.services.auth)
 
+    implementation(platform("com.google.firebase:firebase-bom:33.11.0"))
+    implementation("com.google.firebase:firebase-analytics")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

@@ -5,8 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import com.example.myapplication.R;
-
+import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -29,13 +28,19 @@ public class LoginActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.textView);
 
-        // Google Sign-In yapılandırması
+        // Google Sign-In Configuration
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("93499832362-4s4rss14omfg5todeok8amlm4rpsear4.apps.googleusercontent.com") // google-services.json içindeki client ID
+                .requestIdToken("575462258657-c5jv2ch3uabf6liladul3umrij78qv8q.apps.googleusercontent.com") // Use the correct Client ID
                 .requestEmail()
                 .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        // Check if user is already signed in
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        if (account != null) {
+            goToMainActivity(); // If already signed in, go to the map screen
+        }
 
         findViewById(R.id.buttonGoogleSignIn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,24 +66,25 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
+        goToMainActivity();
 //        try {
 //            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 //            if (account != null) {
 //                String displayName = account.getDisplayName();
 //                String email = account.getEmail();
-//                //textView.setText("Signed in as: " + displayName + "\nEmail: " + email);
+//                Log.d("Google Sign-In", "Signed in as: " + displayName + ", Email: " + email);
 //
-//                // Navigate to MainActivity (Map)
-//                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-//                startActivity(intent);
-//                finish(); // Optional: Close the login activity
+//                goToMainActivity();
 //            }
 //        } catch (ApiException e) {
-//            //Log.w("Google Sign-In", "signInResult:failed code=" + e.getStatusCode());
-//            //textView.setText(e.toString());
+//            Log.w("Google Sign-In", "Sign-in failed. Code=" + e.getStatusCode());
+//            Toast.makeText(this, "Google Sign-In failed", Toast.LENGTH_SHORT).show();
 //        }
+    }
+
+    private void goToMainActivity() {
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
-        finish(); // Optional: Close the login activity
+        finish(); // This prevents going back to LoginActivity
     }
 }
