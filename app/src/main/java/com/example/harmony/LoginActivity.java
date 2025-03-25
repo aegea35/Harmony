@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // Google Sign-In yapılandırması
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("93499832362-4s4rss14omfg5todeok8amlm4rpsear4.apps.googleusercontent.com") // google-services.json içindeki client ID
+                .requestIdToken("CLIENT-ID") // google-services.json içindeki client ID
                 .requestEmail()
                 .build();
 
@@ -61,6 +61,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
+        //goToMainActivity();
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
             if (account != null) {
@@ -76,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goToMainActivity() {
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(LoginActivity.this, SpotifyLoginActivity.class);
         startActivity(intent);
         finish(); // This prevents going back to LoginActivity
     }
