@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // Google Sign-In yapılandırması
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("575462258657-75cp5gcj5502sjnaeciv58avbd6tcc9e.apps.googleusercontent.com") // google-services.json içindeki client ID
+                .requestIdToken("insert google services json id") // google-services.json içindeki client ID
                 .requestEmail()
                 .build();
 
