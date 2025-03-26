@@ -21,17 +21,15 @@ public class LoginActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 100;
     private GoogleSignInClient mGoogleSignInClient;
     private TextView textView;
+    String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         textView = findViewById(R.id.textView);
-
-        // Google Sign-In yapılandırması
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("CLIENT-ID") // google-services.json içindeki client ID
+                .requestIdToken("575462258657-75cp5gcj5502sjnaeciv58avbd6tcc9e.apps.googleusercontent.com") // google-services.json içindeki client ID
                 .requestEmail()
                 .build();
 
@@ -66,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
             if (account != null) {
                 String displayName = account.getDisplayName();
-                String email = account.getEmail();
+                email = account.getEmail();
                 textView.setText("Signed in as: " + displayName + "\nEmail: " + email);
                 goToMainActivity();
             }
@@ -78,7 +76,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private void goToMainActivity() {
         Intent intent = new Intent(LoginActivity.this, SpotifyLoginActivity.class);
+        intent.putExtra("EMAIL", email);
         startActivity(intent);
-        finish(); // This prevents going back to LoginActivity
+        finish();
     }
 }

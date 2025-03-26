@@ -31,6 +31,7 @@ public class SpotifyLoginActivity extends AppCompatActivity {
             "&show_dialog=false";
 
     private String accessToken;
+    public String email;
 
     private final ActivityResultLauncher<Intent> authLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -55,6 +56,7 @@ public class SpotifyLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spotify);
         findViewById(R.id.onSpotifyLoginClick).setOnClickListener(v -> openSpotifyLogin());
+        email = getIntent().getStringExtra("EMAIL");
     }
 
     private void openSpotifyLogin() {
@@ -83,6 +85,7 @@ public class SpotifyLoginActivity extends AppCompatActivity {
                 saveAccessToken(accessToken);
 
                 Intent mainIntent = new Intent(this, MainActivity.class);
+                mainIntent.putExtra("EMAIL", email);
                 startActivity(mainIntent);
                 finish();
             } else {
