@@ -5,12 +5,14 @@ public class User implements Comparable {
     Double latitude;
     Double longitude;
     String songInfo;
+    boolean isActive;
 
-    public User(String userid, Double latitude, Double longitude, String songInfo){
+    public User(String userid, Double latitude, Double longitude, String songInfo, boolean isActive){
         this.latitude = latitude;
         this.longitude = longitude;
         this.songInfo = songInfo;
         this.userid = userid;
+        this.isActive = isActive;
     }
 
     @Override
