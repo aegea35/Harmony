@@ -5,13 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context=".LoginActivity">
+=======
+    tools:context=".MainActivity">
+>>>>>>> main
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="Harmony'e Hoşgeldiniz"
+=======
+        android:text="Please log in using your Google Account."
+>>>>>>> main
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +30,7 @@
         android:id="@+id/buttonGoogleSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="Google Sign-In"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
@@ -32,3 +41,15 @@
         android:layout_marginTop="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="100dp"
+        android:onClick="buttonGoogleSignIn"
+        android:text="Google Login"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> main

@@ -3,9 +3,17 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Harmony</string>
+<<<<<<< HEAD
     <style name="Base.Theme.Harmony" parent="Theme.Material3.DayNight.NoActionBar">
         
         
     </style>
     <style name="Theme.Harmony" parent="Base.Theme.Harmony"/>
+=======
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication"/>
+>>>>>>> main
 </resources>

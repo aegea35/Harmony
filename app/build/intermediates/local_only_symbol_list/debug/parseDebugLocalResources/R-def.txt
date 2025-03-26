@@ -4,23 +4,37 @@ color black
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+<<<<<<< HEAD
 id buttonContainer
+=======
+>>>>>>> main
 id buttonGoogleSignIn
 id imageButton
 id imageButton2
 id imageButton3
 id main
 id map
+<<<<<<< HEAD
 id onSpotifyLoginClick
 id textView
 layout activity_login
 layout activity_main
 layout activity_spotify
+=======
+id textView
+layout activity_login
+layout activity_main
+>>>>>>> main
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string app_name
+<<<<<<< HEAD
 style Base.Theme.Harmony
 style Theme.Harmony
+=======
+style Base.Theme.MyApplication
+style Theme.MyApplication
+>>>>>>> main
 xml backup_rules
 xml data_extraction_rules
