@@ -1,0 +1,7 @@
+com.example.harmony.test.app-core-1.6.1-0 /Users/yankiozan/.gradle/caches/8.11.1/transforms/2dd3862d65237a99b9ce537a3c77a9e1/transformed/core-1.6.1/res
+com.example.harmony.test.app-tracing-1.1.0-1 /Users/yankiozan/.gradle/caches/8.11.1/transforms/93f066d7320ec288b570e9159d933c65/transformed/tracing-1.1.0/res
+com.example.harmony.test.app-annotation-experimental-1.4.0-2 /Users/yankiozan/.gradle/caches/8.11.1/transforms/f535e0d2f6866bf056c4f2873780d242/transformed/annotation-experimental-1.4.0/res
+com.example.harmony.test.app-androidTest-3 /Users/yankiozan/Desktop/Harmony2 2/app/build/generated/res/resValues/androidTest/debug
+com.example.harmony.test.app-mergeDebugAndroidTestResources-4 /Users/yankiozan/Desktop/Harmony2 2/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.example.harmony.test.app-mergeDebugAndroidTestResources-5 /Users/yankiozan/Desktop/Harmony2 2/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.example.harmony.test.app-debugAndroidTest-6 /Users/yankiozan/Desktop/Harmony2 2/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

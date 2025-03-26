@@ -1,0 +1,27 @@
+EXECUTING: /Users/yankiozan/Library/Android/sdk/build-tools/35.0.0/aapt dump badging /Users/yankiozan/Desktop/Harmony2 2/app/build/intermediates/apk/androidTest/debug/app-debug-androidTest.apk
+CURRENT_WORKING_DIRECTORY: /Users/yankiozan/Desktop/Harmony2 2
+START_TIME: 2025-03-25 22:06:31.584
+START_TIME-NANOS: 2025-03-25 22:06:31.584194000
+ENVIRONMENT:
+
+*****************************************
+STDOUT/STDERR BELOW
+===================
+package: name='com.example.harmony.test' versionCode='' versionName='' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'
+sdkVersion:'24'
+targetSdkVersion:'35'
+application: label='' icon=''
+application-debuggable
+uses-library:'android.test.runner'
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--'
+densities: '160'
+===================
+END_TIME: 2025-03-25 22:06:31.599
+END_TIME-NANOS: 2025-03-25 22:06:31.599175000
+DURATION: 14ms
+EXIT CODE: 0

@@ -1,0 +1,46 @@
+INSTRUMENTATION_STATUS: class=com.example.harmony.SpotifyLoginActivityTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.example.harmony.SpotifyLoginActivityTest:
+INSTRUMENTATION_STATUS: test=testHandleAuthResponse_Success
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.harmony.SpotifyLoginActivityTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=testHandleAuthResponse_Success
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.harmony.SpotifyLoginActivityTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.NullPointerException: Can't toast on a thread that has not called Looper.prepare()
+at com.android.internal.util.Preconditions.checkNotNull(Preconditions.java:174)
+at android.widget.Toast.getLooper(Toast.java:188)
+at android.widget.Toast.<init>(Toast.java:173)
+at android.widget.Toast.makeText(Toast.java:518)
+at android.widget.Toast.makeText(Toast.java:507)
+at com.example.harmony.MainActivity.lambda$getCurrentPlayingTrack$2$com-example-harmony-MainActivity(MainActivity.java:95)
+at com.example.harmony.MainActivity$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+at java.lang.Thread.run(Thread.java:1012)
+
+INSTRUMENTATION_STATUS: stream=
+Process crashed while executing testHandleAuthResponse_Success(com.example.harmony.SpotifyLoginActivityTest):
+java.lang.NullPointerException: Can't toast on a thread that has not called Looper.prepare()
+at com.android.internal.util.Preconditions.checkNotNull(Preconditions.java:174)
+at android.widget.Toast.getLooper(Toast.java:188)
+at android.widget.Toast.<init>(Toast.java:173)
+at android.widget.Toast.makeText(Toast.java:518)
+at android.widget.Toast.makeText(Toast.java:507)
+at com.example.harmony.MainActivity.lambda$getCurrentPlayingTrack$2$com-example-harmony-MainActivity(MainActivity.java:95)
+at com.example.harmony.MainActivity$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+at java.lang.Thread.run(Thread.java:1012)
+
+INSTRUMENTATION_STATUS: test=testHandleAuthResponse_Success
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: shortMsg=Process crashed.
+INSTRUMENTATION_CODE: 0
+

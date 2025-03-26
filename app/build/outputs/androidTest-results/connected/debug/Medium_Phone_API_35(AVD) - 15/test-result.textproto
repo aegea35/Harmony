@@ -1,0 +1,90 @@
+# proto-message: google.testing.platform.proto.api.core.TestSuiteResult
+# 2025-03-25T19:06:31.749058Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 1
+  device {
+    id: "emulator-5554"
+    friendly_name: "primary"
+  }
+}
+test_status: FAILED
+test_result {
+  test_case {
+    test_class: "SpotifyLoginActivityTest"
+    test_package: "com.example.harmony"
+    test_method: "testHandleAuthResponse_Success"
+    start_time {
+      seconds: 1742929589
+      nanos: 364000000
+    }
+    end_time {
+      seconds: 1742929590
+      nanos: 984000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/yankiozan/Desktop/Harmony2 2/app/build/outputs/androidTest-results/connected/debug/Medium_Phone_API_35(AVD) - 15/logcat-com.example.harmony.SpotifyLoginActivityTest-testHandleAuthResponse_Success.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/yankiozan/Desktop/Harmony2 2/app/build/outputs/androidTest-results/connected/debug/Medium_Phone_API_35(AVD) - 15/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/yankiozan/Desktop/Harmony2 2/app/build/outputs/androidTest-results/connected/debug/Medium_Phone_API_35(AVD) - 15/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/yankiozan/Desktop/Harmony2 2/app/build/outputs/androidTest-results/connected/debug/Medium_Phone_API_35(AVD) - 15/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/Users/yankiozan/Desktop/Harmony2 2/app/build/outputs/androidTest-results/connected/debug/Medium_Phone_API_35(AVD) - 15/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}
+issue {
+  namespace {
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  severity: SEVERE
+  code: 1
+  name: "INSTRUMENTATION_FAILED"
+  message: "Test run failed to complete. Instrumentation run failed due to Process crashed."
+}
+issue {
+  severity: SEVERE
+  message: "Logcat of last crash: \nProcess: com.example.harmony, PID: 12849\njava.lang.NullPointerException: Can\'t toast on a thread that has not called Looper.prepare()\n\tat com.android.internal.util.Preconditions.checkNotNull(Preconditions.java:174)\n\tat android.widget.Toast.getLooper(Toast.java:188)\n\tat android.widget.Toast.<init>(Toast.java:173)\n\tat android.widget.Toast.makeText(Toast.java:518)\n\tat android.widget.Toast.makeText(Toast.java:507)\n\tat com.example.harmony.MainActivity.lambda$getCurrentPlayingTrack$2$com-example-harmony-MainActivity(MainActivity.java:95)\n\tat com.example.harmony.MainActivity$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)\n\tat java.lang.Thread.run(Thread.java:1012)\n"
+}

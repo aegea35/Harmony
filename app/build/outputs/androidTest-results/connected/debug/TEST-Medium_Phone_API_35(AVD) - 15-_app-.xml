@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.example.harmony.SpotifyLoginActivityTest" tests="1" failures="0" errors="0" skipped="0" time="2.348" timestamp="2025-03-25T19:06:31" hostname="localhost">
+  <properties>
+    <property name="device" value="Medium_Phone_API_35(AVD) - 15" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="testHandleAuthResponse_Success" classname="com.example.harmony.SpotifyLoginActivityTest" time="1.605" />
+  <system-err>Test run failed to complete. Instrumentation run failed due to Process crashed.
+Logcat of last crash: 
+Process: com.example.harmony, PID: 12849
+java.lang.NullPointerException: Can't toast on a thread that has not called Looper.prepare()
+	at com.android.internal.util.Preconditions.checkNotNull(Preconditions.java:174)
+	at android.widget.Toast.getLooper(Toast.java:188)
+	at android.widget.Toast.&lt;init&gt;(Toast.java:173)
+	at android.widget.Toast.makeText(Toast.java:518)
+	at android.widget.Toast.makeText(Toast.java:507)
+	at com.example.harmony.MainActivity.lambda$getCurrentPlayingTrack$2$com-example-harmony-MainActivity(MainActivity.java:95)
+	at com.example.harmony.MainActivity$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at java.lang.Thread.run(Thread.java:1012)
+
+</system-err>
+</testsuite>

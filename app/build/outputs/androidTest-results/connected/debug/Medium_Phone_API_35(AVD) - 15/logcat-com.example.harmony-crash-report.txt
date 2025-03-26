@@ -1,0 +1,10 @@
+Process: com.example.harmony, PID: 12849
+java.lang.NullPointerException: Can't toast on a thread that has not called Looper.prepare()
+	at com.android.internal.util.Preconditions.checkNotNull(Preconditions.java:174)
+	at android.widget.Toast.getLooper(Toast.java:188)
+	at android.widget.Toast.<init>(Toast.java:173)
+	at android.widget.Toast.makeText(Toast.java:518)
+	at android.widget.Toast.makeText(Toast.java:507)
+	at com.example.harmony.MainActivity.lambda$getCurrentPlayingTrack$2$com-example-harmony-MainActivity(MainActivity.java:95)
+	at com.example.harmony.MainActivity$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at java.lang.Thread.run(Thread.java:1012)

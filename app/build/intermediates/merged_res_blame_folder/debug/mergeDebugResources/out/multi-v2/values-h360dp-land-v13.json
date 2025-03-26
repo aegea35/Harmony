@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myapplication.app-mergeDebugResources-36:/values-h360dp-land-v13/values-h360dp-land-v13.xml",
+            "outputFile": "com.example.harmony.app-mergeDebugResources-38:/values-h360dp-land-v13/values-h360dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\aegea\\.gradle\\caches\\8.10.2\\transforms\\e1d9f3ee344f630fc224946c9ea94696\\transformed\\material-1.12.0\\res\\values-h360dp-land-v13\\values-h360dp-land-v13.xml",
+                    "source": "/Users/yankiozan/.gradle/caches/8.11.1/transforms/73cc58ad8ca9d74620e5960d46f2caa2/transformed/material-1.10.0/res/values-h360dp-land-v13/values-h360dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
