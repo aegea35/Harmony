@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
+            "outputFile": "com.example.harmony.app-mergeDebugResources-42:/values-large-v4/values-large-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\aegea\\.gradle\\caches\\8.11.1\\transforms\\34210dc0da4900ab06d67718dacc9fbd\\transformed\\material-1.10.0\\res\\values-large-v4\\values-large-v4.xml",
+=======
             "outputFile": "com.example.myapplication.app-mergeDebugResources-36:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\aegea\\.gradle\\caches\\8.10.2\\transforms\\e1d9f3ee344f630fc224946c9ea94696\\transformed\\material-1.12.0\\res\\values-large-v4\\values-large-v4.xml",
+>>>>>>> main
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +28,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
+                    "source": "C:\\Users\\aegea\\.gradle\\caches\\8.11.1\\transforms\\99184885ddd99a020444e97e2f1013df\\transformed\\appcompat-1.7.0\\res\\values-large-v4\\values-large-v4.xml",
+=======
                     "source": "C:\\Users\\aegea\\.gradle\\caches\\8.10.2\\transforms\\bd7511a086af0b60089e2be9bfeb982b\\transformed\\appcompat-1.7.0\\res\\values-large-v4\\values-large-v4.xml",
+>>>>>>> main
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

@@ -2,9 +2,15 @@
 <resources>
     <color name="notification_action_color_filter">@color/androidx_core_secondary_text_default_material_light</color>
     <item format="float" name="m3_sys_state_dragged_state_layer_opacity" type="dimen">0.32</item>
+<<<<<<< HEAD
+    <item format="float" name="m3_sys_state_focus_state_layer_opacity" type="dimen">0.24</item>
+    <item format="float" name="m3_sys_state_hover_state_layer_opacity" type="dimen">0.16</item>
+    <item format="float" name="m3_sys_state_pressed_state_layer_opacity" type="dimen">0.24</item>
+=======
     <item format="float" name="m3_sys_state_focus_state_layer_opacity" type="dimen">0.2</item>
     <item format="float" name="m3_sys_state_hover_state_layer_opacity" type="dimen">0.16</item>
     <item format="float" name="m3_sys_state_pressed_state_layer_opacity" type="dimen">0.2</item>
+>>>>>>> main
     <dimen name="mtrl_calendar_pre_l_text_clip_padding">0dp</dimen>
     <dimen name="mtrl_exposed_dropdown_menu_popup_vertical_offset">1dp</dimen>
     <item format="float" name="mtrl_high_ripple_default_alpha" type="dimen">0.48</item>
@@ -508,6 +514,17 @@
     <item name="android:fontFamily">sans-serif-medium</item>
     <item name="android:textStyle">normal</item>
   </style>
+<<<<<<< HEAD
+    <style name="Theme.Hidden" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+=======
+>>>>>>> main
     <style name="ThemeOverlay.Material3.Dialog.Alert.Framework" parent="ThemeOverlay.MaterialComponents.Dialog.Alert.Framework">
     <item name="android:windowElevation">@dimen/m3_alert_dialog_elevation</item>
     <item name="android:buttonBarButtonStyle">@style/Widget.Material3.Button.TextButton.Dialog.Flush</item>
@@ -535,6 +552,27 @@
     <style name="ThemeOverlay.MaterialComponents.MaterialAlertDialog.Picker.Date.Spinner">
     <item name="android:datePickerStyle">@style/MaterialAlertDialog.MaterialComponents.Picker.Date.Spinner</item>
   </style>
+<<<<<<< HEAD
+    <style name="WhiteBackgroundDialogTheme" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowContentTransitions">false</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style>
+    <style name="WhiteBackgroundTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+<item name="android:windowNoTitle">true</item>
+<item name="android:windowFullscreen">false</item>
+<item name="android:windowOverscan">true</item>
+<item name="android:fadingEdge">none</item>
+<item name="android:windowBackground">@android:color/white</item>
+<item name="android:windowContentTransitions">false</item>
+<item name="android:windowAnimationStyle">@null</item>
+</style>
+=======
+>>>>>>> main
     <style name="Widget.Compat.NotificationActionContainer" parent="">
         <item name="android:background">@drawable/notification_action_background</item>
     </style>

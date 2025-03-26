@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
+    <style name="Base.Theme.Harmony" parent="Theme.Material3.DayNight.NoActionBar">
+=======
     <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+>>>>>>> main
         
         
     </style>

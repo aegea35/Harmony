@@ -4,7 +4,11 @@
     "type": "APK",
     "kind": "Directory"
   },
+<<<<<<< HEAD
+  "applicationId": "com.example.harmony",
+=======
   "applicationId": "com.example.myapplication",
+>>>>>>> main
   "variantName": "debug",
   "elements": [
     {

@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
+            "outputFile": "com.example.harmony.app-mergeDebugResources-42:/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\aegea\\.gradle\\caches\\8.11.1\\transforms\\99184885ddd99a020444e97e2f1013df\\transformed\\appcompat-1.7.0\\res\\values-watch-v21\\values-watch-v21.xml",
+=======
             "outputFile": "com.example.myapplication.app-mergeDebugResources-36:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\aegea\\.gradle\\caches\\8.10.2\\transforms\\bd7511a086af0b60089e2be9bfeb982b\\transformed\\appcompat-1.7.0\\res\\values-watch-v21\\values-watch-v21.xml",
+>>>>>>> main
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",
