@@ -6,9 +6,9 @@ android {
     signingConfigs {
         getByName("debug") {
             storeFile = file("$rootDir/KEYSTORE.jks")
-            storePassword = "GayEge123!"
+            storePassword = "INSERTPASSWORD"
             keyAlias = "key0"
-            keyPassword = "GayEge123!"
+            keyPassword = "INSERTPASSWORD"
         }
     }
     namespace = "com.example.harmony"
