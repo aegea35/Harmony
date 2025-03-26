@@ -106,6 +106,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         Intent serviceIntent = new Intent(this, BackgroundService.class);
         startService(serviceIntent);
+
+        userLocation = new LatLng(0,0);
     }
 
     private String getAccessToken() {
