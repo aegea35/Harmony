@@ -82,4 +82,11 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public TextView getTextView(){
+        return textView;
+    }
+    public void setGoogleSignInClient(GoogleSignInClient client) {
+        this.mGoogleSignInClient = client;
+    }
 }

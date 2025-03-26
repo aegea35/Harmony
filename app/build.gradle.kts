@@ -6,9 +6,9 @@ android {
     signingConfigs {
         getByName("debug") {
             storeFile = file("$rootDir/KEYSTORE.jks")
-            storePassword = "INSERT PASSWORD"
+            storePassword = "GayEge123!"
             keyAlias = "key0"
-            keyPassword = "INSERT PASSWORD"
+            keyPassword = "GayEge123!"
         }
     }
     namespace = "com.example.harmony"
@@ -54,6 +54,16 @@ dependencies {
     implementation ("androidx.browser:browser:1.7.0")
     implementation("androidx.webkit:webkit:1.8.0")  // WebView için
     implementation ("androidx.appcompat:appcompat:1.7.0")
+    implementation(libs.espresso.intents)
+
+    testImplementation ("org.powermock:powermock-module-junit4:2.0.9")
+    testImplementation ("org.powermock:powermock-api-mockito2:2.0.9")
+    testImplementation ("org.mockito:mockito-core:5.3.1")
+
+    testImplementation ("io.mockk:mockk:1.13.5")
+    androidTestImplementation ("org.mockito:mockito-android:5.3.1")
+    testImplementation ("com.google.truth:truth:1.1.3")
+    androidTestImplementation ("com.google.truth:truth:1.1.3")
 
     implementation(libs.appcompat)
     implementation(libs.material)

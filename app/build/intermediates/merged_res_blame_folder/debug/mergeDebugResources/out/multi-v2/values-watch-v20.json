@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.harmony.app-mergeDebugResources-40:/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "com.example.harmony.app-mergeDebugResources-42:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/Users/mirmir/.gradle/caches/8.11.1/transforms/bf851f3c60ed192ffa22b50daf6ae3d6/transformed/appcompat-1.7.0/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "C:\\Users\\aegea\\.gradle\\caches\\8.11.1\\transforms\\99184885ddd99a020444e97e2f1013df\\transformed\\appcompat-1.7.0\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mirmir/.gradle/caches/8.11.1/transforms/ec7938aad2267020f12e6f51a7be9999/transformed/play-services-auth-21.3.0/res/values-watch-v20/values.xml",
+                    "source": "C:\\Users\\aegea\\.gradle\\caches\\8.11.1\\transforms\\3705831a17232acdbcabcc00b0a54818\\transformed\\play-services-auth-21.3.0\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

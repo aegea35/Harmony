@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.harmony.app-mergeReleaseResources-40:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "com.example.harmony.app-mergeReleaseResources-42:/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/mirmir/.gradle/caches/8.11.1/transforms/bfc529cd3880fa2ae61d44a2ca05200c/transformed/material-1.10.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\aegea\\.gradle\\caches\\8.11.1\\transforms\\34210dc0da4900ab06d67718dacc9fbd\\transformed\\material-1.10.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mirmir/.gradle/caches/8.11.1/transforms/bf851f3c60ed192ffa22b50daf6ae3d6/transformed/appcompat-1.7.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\aegea\\.gradle\\caches\\8.11.1\\transforms\\99184885ddd99a020444e97e2f1013df\\transformed\\appcompat-1.7.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

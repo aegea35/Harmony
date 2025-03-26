@@ -80,7 +80,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 .setApplicationId("1:962196792378:android:e59d0186ffa915111c4103")
                 .setApiKey("AIzaSyCv24Y2IGWYqUnbVvKjfAhm4cRr2LLa0CI")
                 .setDatabaseUrl("https://firestore.googleapis.com/v1/projects/harmony-a9c98/databases/(default)/documents")
-                .setProjectId("harmony-a9c98") // Bunu ekleyin!
+                .setProjectId("harmony-a9c98")
                 .build();
 
 

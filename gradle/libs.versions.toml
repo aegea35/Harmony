@@ -14,6 +14,7 @@ media3Extractor = "1.5.1"
 firebaseCommon = "21.0.0"
 firebaseAuth = "23.2.0"
 firebaseFirestore = "25.1.3"
+espressoIntents = "3.6.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -30,6 +31,7 @@ media3-extractor = { group = "androidx.media3", name = "media3-extractor", versi
 firebase-common = { group = "com.google.firebase", name = "firebase-common", version.ref = "firebaseCommon" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+espresso-intents = { group = "androidx.test.espresso", name = "espresso-intents", version.ref = "espressoIntents" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

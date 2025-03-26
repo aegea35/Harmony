@@ -75,7 +75,7 @@ public class SpotifyLoginActivity extends AppCompatActivity {
         handleAuthResponse(intent);
     }
 
-    private void handleAuthResponse(Intent intent) {
+    void handleAuthResponse(Intent intent) {
         Uri uri = intent.getData();
         if (uri != null && uri.toString().startsWith(REDIRECT_URI)) {
             accessToken = extractAccessToken(uri);
