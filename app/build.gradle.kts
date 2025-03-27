@@ -6,9 +6,9 @@ android {
     signingConfigs {
         getByName("debug") {
             storeFile = file("$rootDir/KEYSTORE.jks")
-            storePassword = "INSERT PASSWORD"
+            storePassword = "INSERTPASSWORDHERE"
             keyAlias = "key0"
-            keyPassword = "INSERT PASSWORD"
+            keyPassword = "INSERTPASSWORDHERE"
         }
     }
     namespace = "com.example.harmony"
@@ -37,8 +37,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-
-
 }
 
 dependencies {
@@ -47,12 +45,12 @@ dependencies {
 
     implementation("com.google.firebase:firebase-auth:22.0.0")
     implementation("com.google.firebase:firebase-firestore:24.7.1")
-    implementation("com.google.firebase:firebase-core:21.1.0")// or latest version
+    implementation("com.google.firebase:firebase-core:21.1.0")
     implementation("com.google.firebase:firebase-bom:32.2.0")
     implementation("com.google.firebase:firebase-analytics:21.3.0")
 
     implementation ("androidx.browser:browser:1.7.0")
-    implementation("androidx.webkit:webkit:1.8.0")  // WebView için
+    implementation("androidx.webkit:webkit:1.8.0")
     implementation ("androidx.appcompat:appcompat:1.7.0")
 
     implementation(libs.appcompat)

@@ -1,16 +1,12 @@
 package com.example.harmony;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.PowerManager;
-import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -53,7 +49,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private Runnable updateTrackRunnable;
     private LatLng userLocation;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1001;
-    private boolean notfirsttime = true;
+    private boolean notFirstTime = true;
     String fullSongInfo;
     FirebaseFirestore db;
     String userId;
@@ -75,18 +71,15 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         if (accessToken != null) startTrackingCurrentTrack();
         else showToast("Spotify token bulunamadı!");
 
-
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setApplicationId("1:962196792378:android:e59d0186ffa915111c4103")
                 .setApiKey("AIzaSyCv24Y2IGWYqUnbVvKjfAhm4cRr2LLa0CI")
                 .setDatabaseUrl("https://firestore.googleapis.com/v1/projects/harmony-a9c98/databases/(default)/documents")
-                .setProjectId("harmony-a9c98") // Bunu ekleyin!
+                .setProjectId("harmony-a9c98")
                 .build();
-
 
         FirebaseApp firebaseApp = FirebaseApp.initializeApp(this, options);
         FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-        firebaseAnalytics.setAnalyticsCollectionEnabled(true);
         if (firebaseApp != null) {
             Log.d("Firebase", "Firebase is initialized.");
         } else {
@@ -96,16 +89,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         userId = getIntent().getStringExtra("EMAIL");
         Log.e("AAAA", userId);
 
-        users.add(new User(userId,0.0, 0.0, "", true));
-
-        PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
-        if (!pm.isIgnoringBatteryOptimizations(getPackageName())) {
-            Intent intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse("package:" + getPackageName()));
-            startActivity(intent);
-        }
-
-        Intent serviceIntent = new Intent(this, BackgroundService.class);
-        startService(serviceIntent);
+        users.add(new User(userId,0.0, 0.0, ""));
     }
 
     private String getAccessToken() {
@@ -137,9 +121,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                     StringBuilder response = new StringBuilder();
                     String line;
-                    while ((line = reader.readLine()) != null) {
-                        response.append(line);
-                    }
+                    while ((line = reader.readLine()) != null) response.append(line);
                     reader.close();
 
                     JSONObject jsonObject = new JSONObject(response.toString());
@@ -156,18 +138,16 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 }
 
                 getCurrentLocation();
+                users.get(0).longitude = userLocation.longitude;
+                users.get(0).latitude = userLocation.latitude;
+                users.get(0).songInfo = fullSongInfo;
 
                 if (userLocation != null && userId != null) {
-                    users.get(0).longitude = userLocation.longitude;
-                    users.get(0).latitude = userLocation.latitude;
-                    users.get(0).songInfo = fullSongInfo;
-                    users.get(0).isActive = true;
                     Map<String, Object> save = new HashMap<>();
                     save.put("latitude", userLocation.latitude);
-                    //Log.e("YAZZZZ", userLocation.latitude + "YAZZZZ");
+                    Log.e("YAZZZZ", userLocation.latitude + "YAZZZZ");
                     save.put("longitude", userLocation.longitude);
                     save.put("song", fullSongInfo);
-                    save.put("isActive", true);
 
                     db.collection("users").document(userId)
                             .set(save)
@@ -184,17 +164,15 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                                 double lat = (Double)(save.get("latitude"));
                                 double lng = (Double)(save.get("longitude"));
                                 String song = (String) (save.get("song"));
-                                boolean isActive = (Boolean) (save.get("isActive"));
 
                                 User u = doesUserExist(doc.getId());
                                 if(u == null){
-                                    users.add(new User(doc.getId(), lat, lng, song, true));
+                                    users.add(new User(doc.getId(), lat, lng, song));
                                 }
                                 else{
                                     u.songInfo = song;
                                     u.latitude = lat;
                                     u.longitude = lng;
-                                    u.isActive = isActive;
                                 }
                             }
                         }
@@ -204,10 +182,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 });
 
             } catch (Exception e) {
-                Log.e("asdas", "Hata:" + e.getMessage());
+                Log.e("3131", "Hata:" + e.getMessage());
             }
         }).start();
-
         updateMapMarker();
 //        mMap.clear();
 //        for(User u: users){
@@ -229,8 +206,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.clear();
         for(User u: users){
             LatLng loc = new LatLng(u.latitude, u.longitude);
-            if (mMap != null && loc != null && u.isActive == true) {
-                //Log.e("SSSS", "SSSSS" + "aaa");
+            if (mMap != null && loc != null) {
+                Log.e("SSSS", "SSSSS" + "aaa");
                 handler.post(() -> {
                     mMap.addMarker(new MarkerOptions().position(loc).title(u.songInfo));
                 });
@@ -256,13 +233,11 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     if (location != null) {
                         userLocation = new LatLng(location.getLatitude(), location.getLongitude());
                         //mMap.addMarker(new MarkerOptions().position(userLocation).title("Konum Bulundu"));
-                        if (notfirsttime) {
+                        if (notFirstTime) {
                             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation, 15));
-                            notfirsttime = false;
+                            notFirstTime = false;
                         }
-                    } else {
-                        showToast("Konum alınamadı!");
-                    }
+                    } else showToast("Konum alınamadı!");
                 }
             });
         }
@@ -277,9 +252,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.setMyLocationEnabled(true);
                     getCurrentLocation();
                 }
-            } else {
-                showToast("Konum izni reddedildi!");
-            }
+            } else showToast("Konum izni reddedildi!");
         }
     }
 
@@ -288,29 +261,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        if (FirebaseApp.getApps(this).isEmpty()) {
-            FirebaseApp.initializeApp(this);
-        }
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    protected void onStop() {
+        super.onStop();
         handler.removeCallbacks(updateTrackRunnable);
         if (userId != null) {
-            Map<String, Object> save = new HashMap<>();
-            save.put("latitude", userLocation.latitude);
-            //Log.e("YAZZZZ", userLocation.latitude + "YAZZZZ");
-            save.put("longitude", userLocation.longitude);
-            save.put("song", fullSongInfo);
-            save.put("isActive", false);
             db.collection("users").document(userId)
-                    .set(save)
-                    .addOnSuccessListener(aVoid -> Log.d("Firestore", "ÇIKKK"))
-                    .addOnFailureListener(e -> Log.e("Firestore", "Hata oluştu", e));
+                    .delete()
+                    .addOnSuccessListener(aVoid -> Log.d("Firestore", "Kullanıcı verisi silindi"))
+                    .addOnFailureListener(e -> Log.e("Firestore", "Veri silme hatası", e));
         }
     }
 }

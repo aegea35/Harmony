@@ -27,9 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         textView = findViewById(R.id.textView);
-
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken("575462258657-75cp5gcj5502sjnaeciv58avbd6tcc9e.apps.googleusercontent.com") // google-services.json içindeki client ID
                 .requestEmail()
